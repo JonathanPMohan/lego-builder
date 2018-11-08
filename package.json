@@ -8,7 +8,7 @@
     "lint": "eslint ./src --ext .js --fix",
     "dev": "NODE_ENV=development webpack-dev-server --content-base dist --hot",
     "start": "npm run lint && npm run dev",
-    "parts": "json-server db/parts.json --port 3003"
+    "partsApi": "json-server db/parts.json --port 3003"
   },
   "repository": {
     "type": "git",
