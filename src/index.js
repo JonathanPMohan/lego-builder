@@ -9,7 +9,9 @@ $('#legoMan').attr('src', legoPhoto);
 const initApp = () => {
   // events.setEvents();
   legoCharacter.initView();
-  legoCharacter.getParts();
+  legoCharacter.getLegoHeads();
+  legoCharacter.getLegoTorsos();
+  legoCharacter.getLegoLegs();
 };
 
 initApp();

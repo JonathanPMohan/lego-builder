@@ -13,7 +13,7 @@ const createLegoMan = (parts) => {
     newString += `
         <div class="projectcard bg-dark p-1 m-3 mb-4 movie" style="max-width: 65rem;" id="${part.id}">
       <div class="card-header border-0">
-        <img class="card-img-top img-thumbnail img-fluid" src="${part.imageUrl}" alt="${part.id}">
+        <img class="card-img-top img-thumbnail img-fluid" src="${part.imageUrl}" alt="${part.id}" height="200px" width="200px">
       </div>
       <div class="card-block px-2">
         <h4 class="card-title text-center">${part.name}:</h4>
@@ -23,7 +23,7 @@ const createLegoMan = (parts) => {
   $('#legoPage').html(newString);
 };
 
-const getParts = () => {
+const getLegoHeads = () => {
   legoParts.getHeads()
     .then((parts) => {
       console.log(parts.data);
@@ -32,6 +32,9 @@ const getParts = () => {
     .catch((error) => {
       console.error({ error });
     });
+};
+
+const getLegoTorsos = () => {
   legoParts.getTorsos()
     .then((parts) => {
       console.log(parts.data);
@@ -40,6 +43,9 @@ const getParts = () => {
     .catch((error) => {
       console.error({ error });
     });
+};
+
+const getLegoLegs = () => {
   legoParts.getLegs()
     .then((parts) => {
       console.log(parts.data);
@@ -50,4 +56,6 @@ const getParts = () => {
     });
 };
 
-export default { initView, getParts };
+export default {
+  initView, getLegoHeads, getLegoLegs, getLegoTorsos,
+};

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,8 +11,56 @@
 </head>
 
 <body>
-    <img id="legoMan">
-    <div id="legoPage"></div>
-  
+  <img id="legoMan">
+  <!-- // Drop Down Selectors For Lego Parts // -->
+  <div class="row justify-content-around" id="dropdown-div">
+    <div class="head-dropdown">
+      <button class="btn btn-danger dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Heads</button>
+      <div id="head-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+    </div>
+
+    <div class="torso-dropdown">
+      <button class="btn btn-warning dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Torsos</button>
+      <div id="torso-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+    </div>
+
+    <div class="leg-dropdown">
+      <button class="btn btn-danger dropdown-toggle btn-sm" type="button" id="dropdownMenuButton" data-toggle="dropdown"
+        aria-haspopup="true" aria-expanded="false">Legs</button>
+      <div id="leg-links" class="dropdown-menu" aria-labelledby="dropdownMenuButton"></div>
+    </div>
+    <div id="random-button">
+      <button type="button" class="btn btn-warning btn-sm">Random!</button>
+    </div>
+
+    <div id="save-button">
+      <button type="button" class="btn btn-danger btn-sm">Save Lego!</button>
+    </div>
+
+  </div>
+  <!-- End of Drop Down Menus-->
+  <div id="legoPage"></div>
+
+  <div class="name" id="name-div">
+    <span id="head-name"></span>
+    <span id="torso-name"></span>
+    <span id="leg-name"></span>
+  </div>
+
+  <div id="image-container">
+    <div class="image-div">
+      <div id="heads-div"></div>
+      <div id="torsos-div"></div>
+      <div id="legs-div"></div>
+    </div>
+  </div>
+
+  <div id="saved-image-container">
+    <div class="saved-image-div"></div>
+  </div>
+
 </body>
+
 </html>
