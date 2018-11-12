@@ -1,17 +1,21 @@
-import $ from 'jquery';
 import 'bootstrap';
 import './index.scss';
-import legoPhoto from './images/lego.png';
+import $ from 'jquery';
 import legoCharacter from './javascripts/components/legoCharacter/legoCharacter';
+import events from './javascripts/helpers/events';
+import legoLogo from './images/lego.png';
 
-$('#legoMan').attr('src', legoPhoto);
+$('#legoMan').attr('src', legoLogo);
 
 const initApp = () => {
-  // events.setEvents();
-  legoCharacter.initView();
-  legoCharacter.getLegoHeads();
-  legoCharacter.getLegoTorsos();
-  legoCharacter.getLegoLegs();
+  legoCharacter.getHeads();
+  legoCharacter.getTorsos();
+  legoCharacter.getLegs();
+  events.headEvent();
+  events.torsoEvent();
+  events.legEvent();
+  events.randomButtonEvent();
+  events.saveButtonEvent();
 };
 
 initApp();

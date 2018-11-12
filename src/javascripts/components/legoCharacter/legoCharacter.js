@@ -1,55 +1,126 @@
 import 'bootstrap';
 import $ from 'jquery';
-import legoParts from '../../data/partsData';
+import './legoCharacter.scss';
+import partsData from '../../data/partsData';
+import dropdown from '../../helpers/dropdown';
 
-const initView = () => {
-  $('#legoPage').show();
-};
-
-//  Lego Parts Function
-const createLegoMan = (parts) => {
+const initHeadLoad = (heads) => {
   let newString = '';
-  parts.forEach((part) => {
-    newString += `
-        <div class="projectcard bg-dark p-1 m-3 mb-4 movie" style="max-width: 65rem;" id="${part.id}">
-      <div class="card-header border-0">
-        <img class="card-img-top img-thumbnail img-fluid" src="${part.imageUrl}" alt="${part.id}" height="200px" width="200px">
-      </div>
-      <div class="card-block px-2">
-        <h4 class="card-title text-center">${part.name}:</h4>
-        </div>  
-    </div>`;
-  });
-  $('#legoPage').html(newString);
+  const randomize = Math.floor(Math.random() * heads.length);
+  newString += `
+      <div class="head legoPart" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}" class="legoImage"></div>`;
+  $('#headsDiv').html(newString);
+  $('#headName').html();
+  $('#headName').html(heads[randomize].name);
 };
 
-const getLegoHeads = () => {
-  legoParts.getHeads()
-    .then((parts) => {
-      console.log(parts.data);
-      createLegoMan(parts.data);
+const initTorsoLoad = (torsos) => {
+  let newString = '';
+  const randomize = Math.floor(Math.random() * torsos.length);
+  newString += `
+      <div class="torso legoPart" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}" class="legoImage"></div>`;
+  $('#torsosDiv').html(newString);
+  $('#torsoName').html();
+  $('#torsoName').html(torsos[randomize].name);
+};
+
+const initLegLoad = (legs) => {
+  let newString = '';
+  const randomize = Math.floor(Math.random() * legs.length);
+  newString += `
+      <div class="leg legoPart" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}" class="legoImage"></div>`;
+  $('#legsDiv').html(newString);
+  $('#legName').html();
+  $('#legName').html(legs[randomize].name);
+};
+
+const customHeadLoad = (head) => {
+  let newString = '';
+  newString += `
+      <div class="head" id="${head.id}"><img src="${head.imageUrl}" class="legoImage"></div>`;
+  $('#headsDiv').html(newString);
+  $('#headName').html();
+  $('#headName').html(head.name);
+};
+
+const customTorsoLoad = (torso) => {
+  let newString = '';
+  newString += `
+      <div class="torso" id="${torso.id}"><img src="${torso.imageUrl}" class="legoImage"></div>`;
+  $('#torsosDiv').html(newString);
+  $('#torsoName').html();
+  $('#torsoName').html(torso.name);
+};
+
+const customLegLoad = (leg) => {
+  let newString = '';
+  newString += `
+      <div class="leg" id="${leg.id}"><img src="${leg.imageUrl}" class="legoImage"></div>`;
+  $('#legsDiv').html(newString);
+  $('#legName').html();
+  $('#legName').html(leg.name);
+};
+
+const selectedHead = (clickedHead) => {
+  partsData.loadHeads()
+    .then((heads) => {
+      heads.data.forEach((customHead) => {
+        if (clickedHead === customHead.id) {
+          customHeadLoad(customHead);
+        }
+      });
+    });
+};
+
+const selectedTorso = (clickedTorso) => {
+  partsData.loadTorsos()
+    .then((torsos) => {
+      torsos.data.forEach((customTorso) => {
+        if (clickedTorso === customTorso.id) {
+          customTorsoLoad(customTorso);
+        }
+      });
+    });
+};
+
+const selectedLeg = (clickedLeg) => {
+  partsData.loadLegs()
+    .then((legs) => {
+      legs.data.forEach((customLeg) => {
+        if (clickedLeg === customLeg.id) {
+          customLegLoad(customLeg);
+        }
+      });
+    });
+};
+
+const getHeads = () => {
+  partsData.loadHeads()
+    .then((heads) => {
+      dropdown.printHeads(heads.data);
+      initHeadLoad(heads.data);
     })
     .catch((error) => {
       console.error({ error });
     });
 };
 
-const getLegoTorsos = () => {
-  legoParts.getTorsos()
-    .then((parts) => {
-      console.log(parts.data);
-      createLegoMan(parts.data);
+const getTorsos = () => {
+  partsData.loadTorsos()
+    .then((torsos) => {
+      dropdown.printTorsos(torsos.data);
+      initTorsoLoad(torsos.data);
     })
     .catch((error) => {
       console.error({ error });
     });
 };
 
-const getLegoLegs = () => {
-  legoParts.getLegs()
-    .then((parts) => {
-      console.log(parts.data);
-      createLegoMan(parts.data);
+const getLegs = () => {
+  partsData.loadLegs()
+    .then((legs) => {
+      dropdown.printLegs(legs.data);
+      initLegLoad(legs.data);
     })
     .catch((error) => {
       console.error({ error });
@@ -57,5 +128,5 @@ const getLegoLegs = () => {
 };
 
 export default {
-  initView, getLegoHeads, getLegoLegs, getLegoTorsos,
+  getHeads, getTorsos, getLegs, selectedHead, selectedTorso, selectedLeg,
 };
