@@ -8,7 +8,7 @@ const initHeadLoad = (heads) => {
   let newString = '';
   const randomize = Math.floor(Math.random() * heads.length);
   newString += `
-      <div class="head legoPart" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}" class="legoImage"></div>`;
+  <div class="head legoPart" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}" class="legoImage"></div>`;
   $('#headsDiv').html(newString);
   $('#headName').html();
   $('#headName').html(heads[randomize].name);
@@ -18,7 +18,7 @@ const initTorsoLoad = (torsos) => {
   let newString = '';
   const randomize = Math.floor(Math.random() * torsos.length);
   newString += `
-      <div class="torso legoPart" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}" class="legoImage"></div>`;
+  <div class="torso legoPart" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}" class="legoImage"></div>`;
   $('#torsosDiv').html(newString);
   $('#torsoName').html();
   $('#torsoName').html(torsos[randomize].name);
@@ -28,7 +28,7 @@ const initLegLoad = (legs) => {
   let newString = '';
   const randomize = Math.floor(Math.random() * legs.length);
   newString += `
-      <div class="leg legoPart" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}" class="legoImage"></div>`;
+  <div class="leg legoPart" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}" class="legoImage"></div>`;
   $('#legsDiv').html(newString);
   $('#legName').html();
   $('#legName').html(legs[randomize].name);
@@ -37,7 +37,7 @@ const initLegLoad = (legs) => {
 const customHeadLoad = (head) => {
   let newString = '';
   newString += `
-      <div class="head" id="${head.id}"><img src="${head.imageUrl}" class="legoImage"></div>`;
+  <div class="head" id="${head.id}"><img src="${head.imageUrl}" class="legoImage"></div>`;
   $('#headsDiv').html(newString);
   $('#headName').html();
   $('#headName').html(head.name);
@@ -46,7 +46,7 @@ const customHeadLoad = (head) => {
 const customTorsoLoad = (torso) => {
   let newString = '';
   newString += `
-      <div class="torso" id="${torso.id}"><img src="${torso.imageUrl}" class="legoImage"></div>`;
+  <div class="torso" id="${torso.id}"><img src="${torso.imageUrl}" class="legoImage"></div>`;
   $('#torsosDiv').html(newString);
   $('#torsoName').html();
   $('#torsoName').html(torso.name);
@@ -55,13 +55,13 @@ const customTorsoLoad = (torso) => {
 const customLegLoad = (leg) => {
   let newString = '';
   newString += `
-      <div class="leg" id="${leg.id}"><img src="${leg.imageUrl}" class="legoImage"></div>`;
+  <div class="leg" id="${leg.id}"><img src="${leg.imageUrl}" class="legoImage"></div>`;
   $('#legsDiv').html(newString);
   $('#legName').html();
   $('#legName').html(leg.name);
 };
 
-const selectedHead = (clickedHead) => {
+const dropDownHead = (clickedHead) => {
   partsData.loadHeads()
     .then((heads) => {
       heads.data.forEach((customHead) => {
@@ -72,7 +72,7 @@ const selectedHead = (clickedHead) => {
     });
 };
 
-const selectedTorso = (clickedTorso) => {
+const dropDownTorso = (clickedTorso) => {
   partsData.loadTorsos()
     .then((torsos) => {
       torsos.data.forEach((customTorso) => {
@@ -83,7 +83,7 @@ const selectedTorso = (clickedTorso) => {
     });
 };
 
-const selectedLeg = (clickedLeg) => {
+const dropDownLeg = (clickedLeg) => {
   partsData.loadLegs()
     .then((legs) => {
       legs.data.forEach((customLeg) => {
@@ -128,5 +128,5 @@ const getLegs = () => {
 };
 
 export default {
-  getHeads, getTorsos, getLegs, selectedHead, selectedTorso, selectedLeg,
+  getHeads, getTorsos, getLegs, dropDownHead, dropDownTorso, dropDownLeg,
 };
