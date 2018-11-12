@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const getHeads = () => axios.get('http://localhost:3003/heads');
-const getTorsos = () => axios.get('http://localhost:3003/torsos');
-const getLegs = () => axios.get('http://localhost:3003/legs');
+const loadHeads = () => axios.get('http://localhost:3003/heads');
+const loadTorsos = () => axios.get('http://localhost:3003/torsos');
+const loadLegs = () => axios.get('http://localhost:3003/legs');
 
-export default { getHeads, getTorsos, getLegs };
+export default { loadHeads, loadTorsos, loadLegs };
