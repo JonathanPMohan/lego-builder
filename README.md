@@ -1,6 +1,6 @@
 # Jonathan's Lego Builder
 
-This project is an exploration of ES6 Modules, Axios, and SASS styling by creating a Custom Lego Builder. Once loaded the user will see a random lego character generated and has the ability to build their own lego characters by either clicking on images or by selecting from dropdowns. If the user chooses, they will have the ability to save their custom lego characters which will line below the builder.
+This project is an exploration of ES6 Modules, Axios, and SASS styling by creating a Custom Lego Builder. Once loaded the user will see a random lego character generated and has the ability to build their own lego characters by clicking on images to select from dropdowns. If the user chooses, they will have the ability to save their custom lego characters which will line below the builder.
 
 ## Screenshots
 * Lego Builder Homepage Screenshot
