@@ -4,10 +4,10 @@ This project is an exploration of ES6 Modules, Axios, and SASS styling by creati
 
 ## Screenshots
 * Lego Builder Homepage Screenshot
-![main screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot2.png)
+![main screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/ss_home.png)
 
 * Lego Character Screenshot
-![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot.png)
+![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/ss_char.png
 
 * Lego Character Save Screenshot
 ![saved character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot3.png)
