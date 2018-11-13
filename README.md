@@ -9,6 +9,9 @@ This project is an exploration of ES6 Modules, Axios, and SASS styling by creati
 * Lego Character Screenshot
 ![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot.png)
 
+* Lego Character Save Screenshot
+![saved character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot3.png)
+
 ## Technoligies Utilized In This Project
 * SASS
 * Webpack
