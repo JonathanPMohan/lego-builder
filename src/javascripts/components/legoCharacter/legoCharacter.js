@@ -10,8 +10,8 @@ const initHeadLoad = (heads) => {
   newString += `
   <div class="head legoPart" id="${heads[randomize].id}"><img src="${heads[randomize].imageUrl}" class="legoImage"></div>`;
   $('#headsDiv').html(newString);
-  $('#headName').html();
-  $('#headName').html(heads[randomize].name);
+  $('#nameDiv').append();
+  $('#nameDiv').append(heads[randomize].name);
 };
 
 const initTorsoLoad = (torsos) => {
@@ -20,8 +20,8 @@ const initTorsoLoad = (torsos) => {
   newString += `
   <div class="torso legoPart" id="${torsos[randomize].id}"><img src="${torsos[randomize].imageUrl}" class="legoImage"></div>`;
   $('#torsosDiv').html(newString);
-  $('#torsoName').html();
-  $('#torsoName').html(torsos[randomize].name);
+  $('#nameDiv').append();
+  $('#nameDiv').append(torsos[randomize].name);
 };
 
 const initLegLoad = (legs) => {
@@ -30,8 +30,8 @@ const initLegLoad = (legs) => {
   newString += `
   <div class="leg legoPart" id="${legs[randomize].id}"><img src="${legs[randomize].imageUrl}" class="legoImage"></div>`;
   $('#legsDiv').html(newString);
-  $('#legName').html();
-  $('#legName').html(legs[randomize].name);
+  $('#nameDiv').append();
+  $('#nameDiv').append(legs[randomize].name);
 };
 
 const customHeadLoad = (head) => {
