@@ -3,7 +3,9 @@
 This will display a field once a button is clicked, that will allow a student to put in his or her name. Then that info upon "sort" will be displayed in a card on screen, applying them to a house randomly. 
 
 ## Screenshots
+* Homepage Screenshot
 ![main screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot2.png)
+* Character Screenshot
 ![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot.png)
 
 ## How to run this project
