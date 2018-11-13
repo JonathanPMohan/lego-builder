@@ -3,8 +3,8 @@
 This will display a field once a button is clicked, that will allow a student to put in his or her name. Then that info upon "sort" will be displayed in a card on screen, applying them to a house randomly. 
 
 ## Screenshots
-![main screenshot](../images/screenshot2.png)
-![character screenshot](./images/screenshot.png)
+![main screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot2.png)
+![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot.png)
 
 ## How to run this project
 * Use npm to install http-server in your terminal:
