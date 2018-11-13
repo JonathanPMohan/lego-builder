@@ -1,23 +1,26 @@
 # Jonathan's Lego Builder
 
-This will display a field once a button is clicked, that will allow a student to put in his or her name. Then that info upon "sort" will be displayed in a card on screen, applying them to a house randomly. 
+This project is an exploration of ES6 Modules, Axios, and SASS styling by creating a Lego Builder. Once loaded the user has the ability to build their own lego characters by either clicking on images or by selecting from dropdowns. If the user chooses, they will have the ability to save their custom lego characters.
 
 ## Screenshots
-* Homepage Screenshot
+* Lego Builder Homepage Screenshot
 ![main screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot2.png)
-* Character Screenshot
+
+* Lego Character Screenshot
 ![character screenshot](https://raw.githubusercontent.com/JonathanPMohan/lego-builder/master/src/images/screenshot.png)
 
-## How to run this project
-* Use npm to install http-server in your terminal:
-```sh 
-npm install -g http-server
-```
-* Run the server
-```sh
-hs -p 9999
-```
-* Open Chrome and navigate to:
-```
-localhost.9999
-```
+* Technoligies Utilized In This Project
+* SASS
+* Webpack
+* Axios
+* ES6 Modules
+
+## How to run the Lego Builder
+To run the lego builder you will need a firebase account and will need to create a new project.
+
+1.  How to serve up json data
+* globally install json-server: `npm install -g json-server`
+* use npm to run json: `npm run data`
+2.  How to serve up the lego builder
+* At the root of the project: `npm install`
+* `npm start`
